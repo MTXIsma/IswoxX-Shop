@@ -3,104 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IswoxX | Premium Shop</title>
+    <title>IswoxX | Premium Marketplace</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-        body { background-color: #0c0c0c; color: #ffffff; font-family: 'Plus Jakarta Sans', sans-serif; }
-        .nav-blur { background: rgba(12, 12, 12, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .product-card {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            transition: all 0.3s ease;
-        }
-        .product-card:hover { border-color: rgba(139, 92, 246, 0.5); transform: translateY(-4px); background: rgba(255, 255, 255, 0.05); }
-        .buy-button { background: #8b5cf6; color: white; font-weight: 700; font-size: 0.85rem; padding: 10px; width: 100%; border-radius: 10px; text-align: center; display: inline-block; transition: 0.2s; }
-        .buy-button:hover { background: #7c3aed; box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); }
-        .category-pill { background: rgba(139, 92, 246, 0.1); color: #a78bfa; padding: 4px 12px; border-radius: 99px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
-        .price-text { font-size: 1.2rem; font-weight: 800; }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body { background-color: #0c0c0c; color: white; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .nav-link { color: #94a3b8; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; transition: 0.2s; }
+        .nav-link:hover { color: white; }
+        .card { background: #111111; border: 1px solid #1f1f1f; border-radius: 24px; padding: 24px; transition: 0.3s; }
+        .card:hover { border-color: #333; transform: translateY(-5px); }
+        .btn-offer { background: #8b5cf6; color: white; font-weight: 800; font-style: italic; padding: 12px; width: 100%; border-radius: 12px; text-align: center; display: block; margin-top: 20px; }
+        .badge { background: #1e1b4b; color: #a78bfa; padding: 4px 12px; border-radius: 99px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; }
     </style>
 </head>
 <body>
-    <!-- NAVIGATION MISE À JOUR -->
-    <nav class="nav-blur sticky top-0 z-50 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold tracking-tighter italic">ISWOX<span class="text-violet-500">X</span></div>
-            <div class="hidden md:flex gap-6 items-center text-xs font-bold uppercase tracking-widest">
-                <a href="https://mtxisma.github.io/Netflix-co/" class="text-gray-400 hover:text-white transition">Streaming</a>
-                <a href="https://mtxisma.github.io/discord-page.html/" class="text-gray-400 hover:text-white transition">Discord</a>
-                <a href="https://mtxisma.github.io/robux/" class="text-gray-400 hover:text-white transition">Robux</a>
-                <a href="https://mtxisma.github.io/AI-tools/" class="text-gray-400 hover:text-white transition">Tools</a>
-                <a href="https://mtxisma.github.io/exchange/" class="text-gray-400 hover:text-white transition text-violet-400">Exchange</a>
-            </div>
-            <a href="https://discord.gg/3qd3ptx8" target="_blank" class="bg-white/5 px-5 py-2 rounded-xl border border-white/10 hover:bg-white/10 transition text-xs font-bold">DISCORD</a>
+    <nav class="flex justify-between items-center px-10 py-6 max-w-7xl mx-auto">
+        <div class="text-xl font-bold italic tracking-tighter">ISWOX<span class="text-violet-500">X</span></div>
+        <div class="hidden md:flex gap-8">
+            <a href="https://mtxisma.github.io/Netflix-co/" class="nav-link">Streaming</a>
+            <a href="https://mtxisma.github.io/discord-page.html/" class="nav-link">Discord</a>
+            <a href="https://mtxisma.github.io/robux/" class="nav-link">Robux</a>
+            <a href="https://mtxisma.github.io/AI-tools/" class="nav-link">Tools</a>
+            <a href="https://mtxisma.github.io/exchange/" class="nav-link text-violet-400">Exchange</a>
         </div>
+        <a href="https://discord.gg/3qd3ptx8" class="border border-white/10 px-6 py-2 rounded-xl text-xs font-bold hover:bg-white/5 transition">DISCORD</a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-16">
-        <div class="mb-16">
-            <h1 class="text-4xl font-extrabold mb-3 italic">Premium Marketplace</h1>
-            <p class="text-gray-500">Le meilleur du digital. Livraison instantanée.</p>
-        </div>
+    <main class="max-w-7xl mx-auto px-10 py-20">
+        <h1 class="text-5xl font-extrabold italic mb-4">Premium Marketplace</h1>
+        <p class="text-gray-500 mb-20">Le meilleur du digital. Livraison instantanée.</p>
 
-        <!-- CATEGORY: HOT SERVICES -->
-        <h2 class="text-gray-600 text-[10px] font-black uppercase tracking-[0.3em] mb-8 flex items-center gap-4">
-            Meilleures Ventes <span class="h-px bg-white/5 flex-grow"></span>
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <p class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-600 mb-10 border-b border-white/5 pb-4">Meilleures Ventes</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
             <!-- DAZN -->
-            <div class="product-card p-6 flex flex-col">
-                <div class="flex justify-between items-start mb-4"><span class="category-pill">Streaming</span><i class="fas fa-tv text-gray-700"></i></div>
-                <h3 class="font-bold mb-1">DAZN Subscription</h3>
+            <div class="card">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="badge">Streaming</span>
+                    <i class="fas fa-tv text-gray-700"></i>
+                </div>
+                <h3 class="font-bold text-lg">DAZN Subscription</h3>
                 <p class="text-gray-500 text-xs mb-4">Sports Premium HD</p>
-                <div class="mt-auto"><div class="price-text mb-4">3,69€</div><a href="https://mtxisma.github.io/Netflix-co/" class="buy-button italic">VOIR L'OFFRE</a></div>
+                <div class="text-2xl font-bold">3,69€</div>
+                <a href="https://mtxisma.github.io/Netflix-co/" class="btn-offer">VOIR L'OFFRE</a>
             </div>
             <!-- ROBUX -->
-            <div class="product-card p-6 flex flex-col">
-                <div class="flex justify-between items-start mb-4"><span class="category-pill">Gaming</span><i class="fas fa-cube text-gray-700"></i></div>
-                <h3 class="font-bold mb-1">1000 Robux</h3>
+            <div class="card">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="badge">Gaming</span>
+                    <i class="fas fa-box text-gray-700"></i>
+                </div>
+                <h3 class="font-bold text-lg">1000 Robux</h3>
                 <p class="text-gray-500 text-xs mb-4">Transfert Sécurisé</p>
-                <div class="mt-auto"><div class="price-text mb-4">3,90€</div><a href="https://mtxisma.github.io/robux/" class="buy-button italic">VOIR L'OFFRE</a></div>
+                <div class="text-2xl font-bold">3,90€</div>
+                <a href="https://mtxisma.github.io/robux/" class="btn-offer">VOIR L'OFFRE</a>
             </div>
             <!-- NITRO -->
-            <div class="product-card p-6 flex flex-col">
-                <div class="flex justify-between items-start mb-4"><span class="category-pill">Discord</span><i class="fab fa-discord text-gray-700"></i></div>
-                <h3 class="font-bold mb-1">Nitro Boost</h3>
+            <div class="card">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="badge">Discord</span>
+                    <i class="fab fa-discord text-gray-700"></i>
+                </div>
+                <h3 class="font-bold text-lg">Nitro Boost</h3>
                 <p class="text-gray-500 text-xs mb-4">1 Mois Full Access</p>
-                <div class="mt-auto"><div class="price-text mb-4">2,60€</div><a href="https://mtxisma.github.io/discord-page.html/" class="buy-button italic">VOIR L'OFFRE</a></div>
+                <div class="text-2xl font-bold">2,60€</div>
+                <a href="https://mtxisma.github.io/discord-page.html/" class="btn-offer">VOIR L'OFFRE</a>
             </div>
             <!-- EXCHANGE -->
-            <div class="product-card p-6 flex flex-col border-violet-500/20">
-                <div class="flex justify-between items-start mb-4"><span class="category-pill">Finance</span><i class="fas fa-exchange-alt text-gray-700"></i></div>
-                <h3 class="font-bold mb-1">Exchange Service</h3>
+            <div class="card">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="badge">Finance</span>
+                    <i class="fas fa-exchange-alt text-gray-700"></i>
+                </div>
+                <h3 class="font-bold text-lg">Exchange Service</h3>
                 <p class="text-gray-500 text-xs mb-4">PayPal / Crypto</p>
-                <div class="mt-auto"><div class="price-text mb-4">Dès 1% fees</div><a href="https://mtxisma.github.io/exchange/" class="buy-button italic">VOIR L'OFFRE</a></div>
+                <div class="text-2xl font-bold">Dès 1% fees</div>
+                <a href="https://mtxisma.github.io/exchange/" class="btn-offer">VOIR L'OFFRE</a>
             </div>
         </div>
     </main>
-
-    <!-- FOOTER MISE À JOUR AVEC TOS & FEEDBACK -->
-    <footer class="max-w-7xl mx-auto px-6 py-20 border-t border-white/5">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-10">
-            <div>
-                <div class="text-xl font-bold italic mb-4">ISWOX<span class="text-violet-500">X</span></div>
-                <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-gray-500">
-                    <a href="https://mtxisma.github.io/tos/" class="hover:text-white transition">Terms of Service</a>
-                    <a href="https://mtxisma.github.io/feedback/" class="hover:text-white transition">Feedbacks</a>
-                    <a href="https://mtxisma.github.io/social.html/" class="hover:text-white transition">Social Boost</a>
-                </div>
-            </div>
-            <div class="bg-white/5 border border-white/5 p-4 rounded-2xl flex items-center gap-4">
-                <i class="fab fa-discord text-[#5865F2] text-xl"></i>
-                <div>
-                    <p class="text-[8px] text-gray-500 uppercase font-black">Direct Contact</p>
-                    <p class="font-bold text-sm">ninjaxxisma</p>
-                </div>
-            </div>
-        </div>
-        <p class="text-center text-[9px] text-gray-800 mt-16 tracking-[0.8em]">© 2026 ISWOXX SHOP • ALL RIGHTS RESERVED</p>
-    </footer>
 </body>
 </html>
