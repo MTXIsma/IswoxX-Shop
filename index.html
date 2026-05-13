@@ -9,76 +9,79 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
         body { background-color: #0c0c0c; color: white; font-family: 'Plus Jakarta Sans', sans-serif; }
-        .nav-link { color: #94a3b8; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; transition: 0.2s; }
-        .nav-link:hover { color: white; }
-        .card { background: #111111; border: 1px solid #1f1f1f; border-radius: 24px; padding: 24px; transition: 0.3s; }
-        .card:hover { border-color: #333; transform: translateY(-5px); }
-        .btn-offer { background: #8b5cf6; color: white; font-weight: 800; font-style: italic; padding: 12px; width: 100%; border-radius: 12px; text-align: center; display: block; margin-top: 20px; }
+        .card { background: #111111; border: 1px solid #1f1f1f; border-radius: 24px; padding: 24px; transition: 0.3s; display: flex; flex-direction: column; height: 100%; }
+        .card:hover { border-color: #8b5cf6; transform: translateY(-5px); }
+        .btn-offer { background: #8b5cf6; color: white; font-weight: 800; font-style: italic; padding: 12px; width: 100%; border-radius: 12px; text-align: center; display: block; margin-top: auto; }
         .badge { background: #1e1b4b; color: #a78bfa; padding: 4px 12px; border-radius: 99px; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; }
     </style>
 </head>
 <body>
     <nav class="flex justify-between items-center px-10 py-6 max-w-7xl mx-auto">
         <div class="text-xl font-bold italic tracking-tighter">ISWOX<span class="text-violet-500">X</span></div>
-        <div class="hidden md:flex gap-8">
-            <a href="https://mtxisma.github.io/Netflix-co/" class="nav-link">Streaming</a>
-            <a href="https://mtxisma.github.io/discord-page.html/" class="nav-link">Discord</a>
-            <a href="https://mtxisma.github.io/robux/" class="nav-link">Robux</a>
-            <a href="https://mtxisma.github.io/AI-tools/" class="nav-link">Tools</a>
-            <a href="https://mtxisma.github.io/exchange/" class="nav-link text-violet-400">Exchange</a>
+        <div class="hidden md:flex gap-8 text-[10px] font-black uppercase tracking-widest text-gray-400">
+            <a href="https://mtxisma.github.io/Netflix-co/" class="hover:text-white">Streaming</a>
+            <a href="https://mtxisma.github.io/discord-page.html/" class="hover:text-white">Discord</a>
+            <a href="https://mtxisma.github.io/robux/" class="hover:text-white">Robux</a>
+            <a href="https://mtxisma.github.io/exchange/" class="text-violet-400">Exchange</a>
         </div>
-        <a href="https://discord.gg/3qd3ptx8" class="border border-white/10 px-6 py-2 rounded-xl text-xs font-bold hover:bg-white/5 transition">DISCORD</a>
+        <a href="https://discord.gg/JmUT8FGpve" class="border border-white/10 px-6 py-2 rounded-xl text-xs font-bold hover:bg-white/5 transition">DISCORD</a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-10 py-20">
-        <h1 class="text-5xl font-extrabold italic mb-4">Premium Marketplace</h1>
-        <p class="text-gray-500 mb-20">Le meilleur du digital. Livraison instantanée.</p>
-
-        <p class="text-[10px] font-black uppercase tracking-[0.4em] text-gray-600 mb-10 border-b border-white/5 pb-4">Meilleures Ventes</p>
+    <main class="max-w-7xl mx-auto px-10 py-16">
+        <h1 class="text-5xl font-extrabold italic mb-16">Premium Marketplace</h1>
         
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <!-- DAZN -->
-            <div class="card">
-                <div class="flex justify-between items-start mb-6">
-                    <span class="badge">Streaming</span>
-                    <i class="fas fa-tv text-gray-700"></i>
-                </div>
-                <h3 class="font-bold text-lg">DAZN Subscription</h3>
-                <p class="text-gray-500 text-xs mb-4">Sports Premium HD</p>
-                <div class="text-2xl font-bold">3,69€</div>
-                <a href="https://mtxisma.github.io/Netflix-co/" class="btn-offer">VOIR L'OFFRE</a>
-            </div>
-            <!-- ROBUX -->
-            <div class="card">
-                <div class="flex justify-between items-start mb-6">
-                    <span class="badge">Gaming</span>
-                    <i class="fas fa-box text-gray-700"></i>
-                </div>
-                <h3 class="font-bold text-lg">1000 Robux</h3>
-                <p class="text-gray-500 text-xs mb-4">Transfert Sécurisé</p>
-                <div class="text-2xl font-bold">3,90€</div>
-                <a href="https://mtxisma.github.io/robux/" class="btn-offer">VOIR L'OFFRE</a>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- NITRO -->
             <div class="card">
-                <div class="flex justify-between items-start mb-6">
-                    <span class="badge">Discord</span>
-                    <i class="fab fa-discord text-gray-700"></i>
-                </div>
-                <h3 class="font-bold text-lg">Nitro Boost</h3>
+                <div class="flex justify-between mb-6"><span class="badge">Discord</span><i class="fab fa-discord"></i></div>
+                <h3 class="font-bold">Nitro Boost</h3>
                 <p class="text-gray-500 text-xs mb-4">1 Mois Full Access</p>
                 <div class="text-2xl font-bold">2,60€</div>
                 <a href="https://mtxisma.github.io/discord-page.html/" class="btn-offer">VOIR L'OFFRE</a>
             </div>
+
+            <!-- SERVER BOOST -->
+            <div class="card">
+                <div class="flex justify-between mb-6"><span class="badge">Discord</span><i class="fas fa-rocket"></i></div>
+                <h3 class="font-bold">14x Server Boosts</h3>
+                <p class="text-gray-500 text-xs mb-4">3 Mois de Level 3</p>
+                <div class="text-2xl font-bold">12,00€</div>
+                <a href="https://mtxisma.github.io/discord-page.html/" class="btn-offer">VOIR L'OFFRE</a>
+            </div>
+
+            <!-- SPOTIFY -->
+            <div class="card">
+                <div class="flex justify-between mb-6"><span class="badge">Music</span><i class="fab fa-spotify text-green-500"></i></div>
+                <h3 class="font-bold">Spotify Premium</h3>
+                <p class="text-gray-500 text-xs mb-4">Compte Privé ou Upgrade</p>
+                <div class="text-2xl font-bold">Dès 2,50€</div>
+                <a href="https://mtxisma.github.io/Netflix-co/" class="btn-offer">VOIR L'OFFRE</a>
+            </div>
+
+            <!-- NETFLIX / DISNEY -->
+            <div class="card">
+                <div class="flex justify-between mb-6"><span class="badge">Streaming</span><i class="fas fa-play"></i></div>
+                <h3 class="font-bold">Netflix / Disney+</h3>
+                <p class="text-gray-500 text-xs mb-4">Abonnements UHD/4K</p>
+                <div class="text-2xl font-bold">Dès 1,20€</div>
+                <a href="https://mtxisma.github.io/Netflix-co/" class="btn-offer">VOIR L'OFFRE</a>
+            </div>
+
+            <!-- ROBUX -->
+            <div class="card">
+                <div class="flex justify-between mb-6"><span class="badge">Gaming</span><i class="fas fa-gamepad"></i></div>
+                <h3 class="font-bold">1000 Robux</h3>
+                <p class="text-gray-500 text-xs mb-4">Transfert Sécurisé</p>
+                <div class="text-2xl font-bold">3,90€</div>
+                <a href="https://mtxisma.github.io/robux/" class="btn-offer">VOIR L'OFFRE</a>
+            </div>
+
             <!-- EXCHANGE -->
             <div class="card">
-                <div class="flex justify-between items-start mb-6">
-                    <span class="badge">Finance</span>
-                    <i class="fas fa-exchange-alt text-gray-700"></i>
-                </div>
-                <h3 class="font-bold text-lg">Exchange Service</h3>
-                <p class="text-gray-500 text-xs mb-4">PayPal / Crypto</p>
-                <div class="text-2xl font-bold">Dès 1% fees</div>
+                <div class="flex justify-between mb-6"><span class="badge">Finance</span><i class="fas fa-coins"></i></div>
+                <h3 class="font-bold">Exchange PayPal</h3>
+                <p class="text-gray-500 text-xs mb-4">Vers Crypto (LTC/BTC)</p>
+                <div class="text-2xl font-bold">1% Fee</div>
                 <a href="https://mtxisma.github.io/exchange/" class="btn-offer">VOIR L'OFFRE</a>
             </div>
         </div>
